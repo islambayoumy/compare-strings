@@ -1,4 +1,6 @@
 from collections import Counter
+from List_Generator import Generator
+
 
 class Finder:
 
@@ -15,10 +17,16 @@ class Finder:
         # O(n^2)
         return [s for s in self.str_list if self.compare_str(string, s)]
 
-if __name__ == '__main__':
-    str_list = ['asd', 'asdd', 'fre', 'glk', 'lkm']
+
+def test_fun():  # pragma: no cover
+    gen = Generator(5, 50)
+    str_list = gen.generate_list()
 
     finder = Finder(str_list)
-    result = finder.find('sad')
+    result = finder.find(str_list[10])
 
-    print(result)
+    return result
+
+
+if __name__ == '__main__':  # pragma: no cover
+    print(test_fun())

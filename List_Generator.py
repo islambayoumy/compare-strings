@@ -13,7 +13,7 @@ class Generator:
         return ''.join(random.choice(chars) for _ in range(lenght))
 
     def generate_list(self):
-        return [self.generate_str(random.randint(0, self.length)) for _ in range(self.size)]
+        return [self.generate_str(random.randint(1, self.length)) for _ in range(self.size)]
 
 
 if __name__ == '__main__':
