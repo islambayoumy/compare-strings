@@ -14,3 +14,11 @@ class Finder:
     def find(self, string):
         # O(n^2)
         return [s for s in self.str_list if self.compare_str(string, s)]
+
+if __name__ == '__main__':
+    str_list = ['asd', 'asdd', 'fre', 'glk', 'lkm']
+
+    finder = Finder(str_list)
+    result = finder.find('sad')
+
+    print(result)
