@@ -10,3 +10,7 @@ class Finder:
             return False  # O(1)
 
         return Counter(str1) == Counter(str2)  # O(n)
+
+    def find(self, string):
+        # O(n^2)
+        return [s for s in self.str_list if self.compare_str(string, s)]
